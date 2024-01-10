@@ -138,7 +138,10 @@ Step 1: Connect the MySQL database with the PowerBI desktop.
 
 Step 2: Loading data into the Power BI deskstop. This step load all the tables and created in the data base. This load option will connect with the SQL and pull all the records into power BI environment.
 
-In that model view looking up for model which form the star schema.
+![2024-01-10 (3)](https://github.com/Virat-Tiwari/Sales-Insights-Analysis-/assets/66154941/60a9ced8-70e2-476f-ade8-33cd97d4c841)
+
+
+In that DATA MODELING  view looking up for model which form the STAR schema thats modeling look like STAR.
 
 ![2024-01-10 (1)](https://github.com/Virat-Tiwari/Sales-Insights-Analysis-/assets/66154941/259ee2a8-d22c-4982-b552-36876cbb3284)
 
@@ -152,7 +155,12 @@ Convert USD into INR in the transaction’s table: the AtliQ Hardware only works
 
 In power query editore finding the total values having USD as currency.
 
-                 `=Table.AddColumn(#"Filtered Rows", "norm_sales_amount",each if [currency] = "USD" then [sales_amount]*75 else [sales_amount]`
+![2024-01-10 (2)](https://github.com/Virat-Tiwari/Sales-Insights-Analysis-/assets/66154941/09de48ae-9eb6-4d60-96c4-52483ae5c4cb)
+
+
+norm_sales_amount
+
+                 norm_sales_amount`=Table.AddColumn(#"Filtered Rows", "norm_sales_amount",each if [currency] = "USD" then [sales_amount]*75 else [sales_amount]`
 
 using this correct formula of the conversion,and converted the USD currency into INR.
 
