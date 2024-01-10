@@ -159,14 +159,16 @@ using this correct formula of the conversion,and converted the USD currency into
 In MySQL Workbench find that there are duplicates of USD and INR:
 
                         `SELECT count(*) from sales.transactions where sales.transactions.currency="INR\r";` 
- 150000 - can't removed as it is large amount
+                        150000 - can't removed as it is large amount
 
- `SELECT count(*) from sales.transactions where sales.transactions.currency="INR";` 
- 279 - we can remove it as it is small record and can be considered as bad data
+                        `SELECT count(*) from sales.transactions where sales.transactions.currency="INR";` 
+                        279 - we can remove it as it is small record and can be considered as bad data
 
- `SELECT count(*) from sales.transactions where sales.transactions.currency="USD\r";` 
+                        `SELECT count(*) from sales.transactions where sales.transactions.currency="USD\r";` 
 
- `SELECT count(*) from sales.transactions where sales.transactions.currency="USD";`
+                        `SELECT count(*) from sales.transactions where sales.transactions.currency="USD";`
+
+                        `SELECT * from sales.transactions where sales.transactions.currency='USD\r' or sales.transactions.currency='USD';`
 
 ## Data Modeling:
 
@@ -176,13 +178,18 @@ In MySQL Workbench find that there are duplicates of USD and INR:
 
 #### Key Measures:
 
-- Profit Margin % = DIVIDE([Total Profit Margin],[Revenue],0)
-- Profit Margin Contribution % = DIVIDE([Total Profit Margin],- CALCULATE([Total Profit Margin],ALL('sales products'),ALL  ('sales customers'),ALL('sales markets')))
-- Revenue = SUM('sales transactions'[sales_amount])
-- Revenue Contribution % = DIVIDE([Revenue],CALCULATE([Revenue],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
-- Revenue LY = CALCULATE([Revenue],SAMEPERIODLASTYEAR('sales date'[date]))
-- sales quntity = SUM('sales transactions'[sales_qty])
-- Total Profit Margin = SUM('Sales transactions'[Profit_Margin])
+                        Profit Margin % = DIVIDE([Total Profit Margin],[Revenue],0)
+
+                        Profit Margin Contribution % = DIVIDE([Total Profit Margin],CALCULATE([Total Profit Margin],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
+
+                        Revenue = SUM('sales transactions'[sales_amount])
+
+                        Revenue Contribution % = DIVIDE([Revenue],CALCULATE([Revenue],ALL('sales products'),ALL('sales customers'),ALL('sales markets')))
+                        Revenue LY = CALCULATE([Revenue],SAMEPERIODLASTYEAR('sales date'[date]))
+
+                        sales quntity = SUM('sales transactions'[sales_qty])
+
+                        Total Profit Margin = SUM('Sales transactions'[Profit_Margin])
 
 ## Build Dashboard Or a Report:
 
