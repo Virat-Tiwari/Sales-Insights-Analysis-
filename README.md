@@ -34,6 +34,7 @@ It is a project management tool which consists of four components-
 ## Project Execution :
 
 
+
 ![231545034-7f6cc437-5683-44f1-92df-a671540ccae9](https://github.com/Virat-Tiwari/Sales-Insights-Analysis-/assets/66154941/2418fd4d-5d24-4b9e-8666-7b31c076ee1f)
 
 ## Data Analysis using MySQL :
@@ -198,6 +199,22 @@ In MySQL Workbench find that there are duplicates of USD and INR:
                         sales quntity = SUM('sales transactions'[sales_qty])
 
                         Total Profit Margin = SUM('Sales transactions'[Profit_Margin])
+
+## Insights
+
+- In this dashboard, we can see company has generated total revenue in 4 years ₹ 984.8M , total profit margin ₹24.7M , Profit margin% 2.5% , Sales Qty ₹2.4M. in 2020 company has generated total revenue of ₹ 142.2M by selling a total of 350.2K and earned a profit of ₹ 2.1M.
+
+- In 4 years Delhi NCR is our largest market in terms of revenue with ₹ 520M and total contribution of 52.8% with total revenue but if you look at the profit margin Delhi NCR is generating only 2.3% profit margin.
+
+- If we check the profit margin then here In 2020 Bhubaneshwar comes into the picture which is generating the highest profit margin of 10.5%. Similarly, if we can check the Profit Contribution % by Market then here Mumbai is the largest player with 24% of total contribution in total profit.
+
+- In 4 years Bengaluru generating the lowest profit margin of -20.8%.if we can check the Profit Contribution % by Market.
+
+- In our top 5 customers, the Electricalsara Stores is our biggest customer who has generated total ₹ 413 M revenue generated in 4 years.
+
+- Highest revenue generated from North zone that is 675.5M.
+
+- Revenue Trend is showing that in June 2020 revenue has been decreased drastically compared to the revenue last year and the profit margin was the least in April 2020.
 
 ## Build Dashboard Or a Report:
 
