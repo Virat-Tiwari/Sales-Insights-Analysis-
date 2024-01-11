@@ -208,7 +208,7 @@ In MySQL Workbench find that there are duplicates of USD and INR:
 
 - If we check the profit margin then here In 2020 Bhubaneshwar comes into the picture which is generating the highest profit margin of 10.5%. Similarly, if we can check the Profit Contribution % by Market then here Mumbai is the largest player with 24% of total contribution in total profit.
 
-- In 4 years Bengaluru generating the lowest profit margin of -20.8%.if we can check the Profit Contribution % by Market.
+- In 4 years Bengaluru generating the lowest profit margin of -20.8%.if we can check the Profit Margin % by Market.
 
 - In our top 5 customers, the Electricalsara Stores is our biggest customer who has generated total ₹ 413 M revenue generated in 4 years.
 
